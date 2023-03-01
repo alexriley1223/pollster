@@ -1,0 +1,18 @@
+# Created by https://www.toptal.com/developers/gitignore/api/node
+# Edit at https://www.toptal.com/developers/gitignore?templates=node
+
+### Node ###
+logs
+*.log
+npm-debug.log*
+
+pids
+*.pid
+*.seed
+*.pid.lock
+
+node_modules/
+
+config.json
+
+.vscode/

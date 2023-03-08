@@ -50,14 +50,11 @@ module.exports = {
             });
 
             const filter = (reaction, user) => {
-                /*
-                if(reaction.emoji.name == "✅") {
-                    reaction.users.remove(user);
+                // const userReactions = reaction.message.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
+                if(!validOptions.includes(reaction.emoji.name)) {
+                    reaction.remove(user.id);
                 }
-                */
-
                 return validOptions.includes(reaction.emoji.name);
-                // return reaction.emoji.name === "✅" && user.id === interaction.user.id;
             }
 
             const collector = sentMessage.createReactionCollector({ filter, time: expiryTime });
@@ -92,7 +89,7 @@ module.exports = {
                     .setColor(0x00ff00)
                     .setTitle(`📊 ${interaction.options.getString('question')}`)
                     .setDescription(`${descArr.join(', ')} won with ${percentHolding}%!`)
-                    .setFooter({ text: "DEX Polls" })
+                    .setFooter({ text: "DEX Polls", iconURL: "https://cdn.discordapp.com/avatars/1080256176501039269/7fde9905b0f87c3b7a90e07ef2a7bf32.png" })
                     .setTimestamp()
 
                 interaction.editReply({ embeds: [ endEmbed ]});

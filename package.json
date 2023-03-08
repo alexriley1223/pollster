@@ -1,13 +1,21 @@
 {
-  "name": "poll-bot",
-  "version": "0.0.1",
-  "description": "",
+  "name": "pollster",
+  "version": "1.0.0",
+  "description": "Polling and Suggestion Discord bot - built with DiscordJS",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "alexriley1223",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexriley1223/pollster.git"
+  },
+  "author": "Alex Riley <alexriley1223@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexriley1223/pollster/issues"
+  },
+  "homepage": "https://github.com/alexriley1223/pollster#readme",
   "dependencies": {
     "discord.js": "^14.7.1"
   }
